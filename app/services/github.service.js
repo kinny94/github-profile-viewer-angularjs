@@ -20,6 +20,9 @@ var GithubService = (function () {
     GithubService.prototype.getUser = function () {
         return this._http.get('http://api.github.com/users/' + this.username).map(function (res) { return res.json(); });
     };
+    GithubService.prototype.getRepos = function () {
+        return this._http.get('http://api.github.com/users/' + this.username + '/repos').map(function (res) { return res.json(); });
+    };
     GithubService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [http_1.Http])

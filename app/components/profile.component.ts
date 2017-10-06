@@ -9,11 +9,16 @@ import 'rxjs/add/operator/map';
 })
 export class ProfileComponent {
     user = [];
+    repos = [];
     // we do dependency injection in constructor in angular 2
     constructor(private _githubService:GithubService){
         this._githubService.getUser().subscribe(user => {
             console.log(user);
             this.user = user;
+        });
+
+        this._githubService.getRepos().subscribe(repos => {
+            this.user = repos;
         })
     }
 }
