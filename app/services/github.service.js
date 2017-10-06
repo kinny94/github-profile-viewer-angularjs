@@ -14,14 +14,18 @@ require('rxjs/add/operator/map');
 var GithubService = (function () {
     function GithubService(_http) {
         this._http = _http;
-        console.log('Github Service Ready..');
+        this.client_id = '9a3e7458eedcc3d3ba25';
+        this.client_secret = '95f66f270b1880175d6610112796a761c130166a';
         this.username = "kinny94";
     }
     GithubService.prototype.getUser = function () {
-        return this._http.get('http://api.github.com/users/' + this.username).map(function (res) { return res.json(); });
+        return this._http.get('http://api.github.com/users/' + this.username + '?client_id=' + this.client_id + '&client_secret=' + this.client_secret).map(function (res) { return res.json(); });
     };
     GithubService.prototype.getRepos = function () {
-        return this._http.get('http://api.github.com/users/' + this.username + '/repos').map(function (res) { return res.json(); });
+        return this._http.get('http://api.github.com/users/' + this.username + '/repos?client_id=' + this.client_id + '&client_secret=' + this.client_secret).map(function (res) { return res.json(); });
+    };
+    GithubService.prototype.updateUser = function (username) {
+        this.username = username;
     };
     GithubService = __decorate([
         core_1.Injectable(), 

@@ -10,6 +10,7 @@ import 'rxjs/add/operator/map';
 export class ProfileComponent {
     user = [];
     repos = [];
+    username:string;
     // we do dependency injection in constructor in angular 2
     constructor(private _githubService:GithubService){
         this._githubService.getUser().subscribe(user => {
@@ -18,7 +19,19 @@ export class ProfileComponent {
         });
 
         this._githubService.getRepos().subscribe(repos => {
-            this.user = repos;
+            this.repos = repos;
+        })
+    }
+
+    searchUser(){
+        this._githubService.updateUser(this.username);
+
+        this._githubService.getUser().subscribe(user => {
+            this.user = user;
+        });
+
+        this._githubService.getRepos().subscribe(repos => {
+            this.repos = repos;
         })
     }
 }
