@@ -1,27 +1,20 @@
-# GithubProfileViewer
+# Angular 2 Beta Boilerplate
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.5.
+## Description
+This repository acts as a very simple Angular 2 Beta Boilerplate with which you can get started developing Angular 2 immediately.
+It is derived from the official Angular 2 Documentation which can be found [here](https://angular.io/docs/ts/latest/quickstart.html).
+## Usage
+Follow the following steps and you're good to go! Important: Typescript and npm has to be installed on your machine!
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+1: Clone repo
+```
+git clone https://github.com/mschwarzmueller/angular-2-beta-boilerplate.git
+```
+2: Install packages
+```
+npm install
+```
+3: Start server (includes auto refreshing) and gulp watcher
+```
+npm start
+```
