@@ -6,12 +6,9 @@ import {HTTP_PROVIDERS} from '@angular/http';
 @Component({
 
     // We include components as directives and services as providers
+    moduleId: module.id,
     selector: 'my-app',
-    template: `
-        <h1>Angular 2 Boilerplate</h1>
-        <profile></profile>
-        <p>Hello World!</p>
-    `,
+    templateUrl: 'app.component.html',
     directives: [ProfileComponent],
     providers: [HTTP_PROVIDERS, GithubService]
 })

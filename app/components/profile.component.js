@@ -14,9 +14,12 @@ require('rxjs/add/operator/map');
 var ProfileComponent = (function () {
     // we do dependency injection in constructor in angular 2
     function ProfileComponent(_githubService) {
+        var _this = this;
         this._githubService = _githubService;
+        this.user = [];
         this._githubService.getUser().subscribe(function (user) {
             console.log(user);
+            _this.user = user;
         });
     }
     ProfileComponent = __decorate([

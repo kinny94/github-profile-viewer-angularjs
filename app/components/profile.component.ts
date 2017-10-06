@@ -8,10 +8,12 @@ import 'rxjs/add/operator/map';
     templateUrl: 'profile.component.html'
 })
 export class ProfileComponent {
+    user = [];
     // we do dependency injection in constructor in angular 2
     constructor(private _githubService:GithubService){
         this._githubService.getUser().subscribe(user => {
             console.log(user);
+            this.user = user;
         })
     }
 }
