@@ -1,3 +1,7 @@
 /node_modules
-/app
-/src
+/typings
+app/*.js
+*.map
+*.log
+.idea
+.DS_Store
